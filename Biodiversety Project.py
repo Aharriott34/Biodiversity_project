@@ -8,9 +8,9 @@ from scipy.stats import chi2_contingency
 # Alternative Hypothesis: There is a difference between species and their level of concern.
 # Chi-Square test will be conducted.
 pd.set_option("display.max_columns", 200)
-species_df = pd.read_csv(r"E:\Python Projects\biodiversity_starter\species_info.csv")
+species_df = pd.read_csv(r"species_info.csv")
 clean_df = species_df.dropna(subset=["conservation_status"], inplace=False)
-observation_df = pd.read_csv(r"E:\Python Projects\biodiversity_starter\observations.csv")
+observation_df = pd.read_csv(r"observations.csv")
 
 # Cross-tab to analyze conservation status.
 species_xtab = pd.crosstab(clean_df.category, clean_df.conservation_status)
